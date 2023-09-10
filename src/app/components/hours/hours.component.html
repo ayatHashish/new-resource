@@ -1,0 +1,13 @@
+
+  <div class="hour-page">
+<div class="appointment__container">
+    <div>
+      <h4>{{'time'| translate}}</h4>
+      <p>{{'dic'| translate}}</p>
+    </div>
+</div>
+<div class="flex flex-column gap-6">
+  <app-day *ngFor="let day of days" [day]="day"></app-day>
+</div>
+  </div>
+

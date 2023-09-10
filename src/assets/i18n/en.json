@@ -1,0 +1,22 @@
+{
+  "add": "Add a new resource",
+  "activated": "activated",
+  "SaveChanges": "Save changes",
+  "delete": "Delete changes",
+  "resource_name": "Resource name",
+  "name": "Ayat Hashish",
+  "choose_source": "Choose the resource type",
+  "book":"Book during the day",
+  "Reservation":"Reservation for a period(more than a day)",
+  "time":"Determine the supplier's working hoursد" ,
+  "dic":"Configure your week settings here. Simply move the sliders and add/remove break times to set up work hours" ,
+   "start_time":"Start time",
+   "end-time":"End time",
+   "resource-av":"The resource is available to" ,
+   "resource-time":"Resource Time" ,
+    "service-time":"Service Time" ,
+    "time-constant":"Time is constant" ,
+    "multiple-booking":"Multiple Booking" ,
+    "only-reservation":"Only one reservation" ,
+    "same-appointment":"Booking more than one person for the same appointmen"
+}

@@ -1,0 +1,53 @@
+<div class="flex align-items-center m-4 gap-4 time-sourc" >
+  <div class="flex flex-row gap-4 align-items-center align-self-start">
+    <p-inputSwitch [(ngModel)]="active"></p-inputSwitch>
+    <div>{{day}}</div>
+  </div>
+  <ul *ngIf="active" class="d-flex flex-column align-items-center gap-3 time-sourc">
+    <li *ngFor="let item of times" class="d-flex align-items-center gap-2 time-sourc">
+      <div class="d-flex flex-column">
+        <p>{{'start_time'| translate}}</p>
+
+        <span class="p-input-icon-left">
+          <i class="fa-regular fa-clock ms-3" style="z-index: 1;" pRipple></i>
+          <p-calendar
+          class="p-inputtext-lg"
+          (onSelect)="updateStore(day)"
+            [(ngModel)]="item.from"
+            [hourFormat]="'12'"
+             [timeOnly]="true"
+            [required]="true"
+            [showButtonBar]="true"
+            [readonlyInput]="true"
+          ></p-calendar>
+        </span>
+
+      </div>
+      <div>
+        --
+      </div>
+      <div class="d-flex flex-column">
+        <p>{{'end-time'| translate}}</p>
+        <span class="p-input-icon-left">
+          <i class="fa-regular fa-clock ms-3" style="z-index: 1;" pRipple></i>
+          <p-calendar
+          class="p-inputtext-lg"
+          (onSelect)="updateStore(day)"
+            [(ngModel)]="item.to"
+            [hourFormat]="'12'"
+             [timeOnly]="true"
+            [required]="true"
+            [showButtonBar]="true"
+            [readonlyInput]="true"
+          ></p-calendar>
+        </span>
+      </div>
+
+      <i (click)="addNew()" *ngIf="item.order == 1" class="cursor-pointer color-circle pi pi-plus" style="font-size: 1.2rem"></i>
+      <i (click)="remove(item)" *ngIf="item.order != 1 " class="cursor-pointer color-circle pi pi-minus" style="font-size: 1.2rem" ></i>
+      <i *ngIf="item.order == 1" class="pi pi-copy cursor-pointer color-circle text-primary" style="font-size: 1.5rem"></i>
+
+
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,32 @@
+<p-card class="border-round-sm">
+  <div class="gap-3 d-flex name-source">
+    <div class="fileupload dropzone" fileDragDrop>
+        
+          <span class="icon-upload">
+             <i class="fa-regular fa-images"></i>
+          </span>
+            <div class="centered">
+              <input type="file" name="file" id="file" multiple>
+              <label class="my-2" for="file">
+                <img src="../../../../assets/img/download.jpeg"alt="">
+              </label>
+
+            </div>
+    </div>
+    <div class="w-100 ml-5 gap-2 d-flex flex-column">
+      <label for="username" class="mb-3">{{'resource_name'|translate}}</label>
+      <input [(ngModel)]="resourceName"  class="p-inputtext-lg" aria-describedby="username-help" id="username" pInputText />
+    </div>
+  </div>
+</p-card>
+<p-card class="border-round-sm  ">
+  <div class="flex flex-row gap-5 blue-gray-100 rservation-sec">
+    <label>{{'choose_source'| translate}}</label>
+    <p-radioButton (click)="onResourceTypeChange(1)" [(ngModel)]="resourceType" label="{{'book'| translate}}"
+      labelStyleClass="mr-2" name="resourceType" class="ng-valid ng-info" value="1">
+    </p-radioButton>
+    <p-radioButton (click)="onResourceTypeChange(2)" [(ngModel)]="resourceType"  label="{{'Reservation'| translate }}"
+      labelStyleClass="bold mr-2" class="ng-valid ng-info" name="resourceType" value="2">
+    </p-radioButton>
+  </div>
+</p-card>

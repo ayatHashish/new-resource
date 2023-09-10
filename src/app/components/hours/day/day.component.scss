@@ -1,0 +1,57 @@
+::ng-deep {
+
+    .color-circle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: #d6dde7;
+    }
+
+    .p-calendar {
+      input {
+        width: 18vw !important;
+        text-align: center;
+        margin-bottom: 2px !important;
+
+      }
+
+      // .p-datepicker{
+      //   top: 51px !important;
+      // }
+    }
+  }
+  @media screen and (max-width: 769px) {
+    .time-sourc {
+      flex-direction: column !important;
+    }
+    ::ng-deep {
+      .p-calendar {
+           input {
+             width: 60vw !important;
+            
+           }
+         }
+         }
+
+  }
+  
+
+  @media screen and (max-width: 580px) {
+    .time-sourc {
+      flex-direction: column !important;
+    }
+
+    ::ng-deep {
+ .p-calendar {
+      input {
+        width: 60vw !important;
+       
+      }
+    }
+    }
+   
+  }
+  

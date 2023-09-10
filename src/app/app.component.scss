@@ -1,0 +1,24 @@
+
+
+.changelang
+{
+  margin:2rem 0;
+}
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button[value="ar"] {
+  background-color: #e74c3c;
+}
+
+button:hover {
+  opacity: 0.8;
+}

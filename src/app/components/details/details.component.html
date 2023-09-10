@@ -1,0 +1,113 @@
+
+<div class="details-section">
+<div class="flex flex-column gap-4 ">
+<div class="row">
+  <div class="col-xl-6 col-md-12">
+  <app-name-resource></app-name-resource>
+  </div>
+   <div class="col-xl-6 col-md-12">
+    <p-card class="flex flex-column gap-6 border-round-sm available">
+    <div class="flex flex-column gap-1 blue-gray-100 x">
+      <label class="mb-3">{{'resource-av'|translate}}</label>
+      <div class="available__time">
+        <p-inputNumber [(ngModel)]="availableTime" [max]="100" [min]="0" [showButtons]="true" ariaLabel="minmax"
+           inputStyleClass="available__time__input" mode="decimal">
+        </p-inputNumber>
+        <p-dropdown [(ngModel)]="selectedUnit" [options]="timeUnit" class="dropdown-units"></p-dropdown>
+      </div>
+    </div>
+    <div class="flex flex-column align-items-start gap-1 blue-gray-100 p-2 ">
+      <label class="mb-3">{{'resource-time'|translate}}</label>
+      <div class="flex flex-row gap-5 blue-gray-100 align-items-center justify-content-between w-full resource-time">
+        <div class="flex flex-row gap-4 resource-time">
+          <div class="flex align-items-center">
+            <p-radioButton
+            (click)="onResourceTimeChange(1)"
+              styleClass="radio-style"
+              name="resourceTime"
+              value="1"
+              [(ngModel)]="resourceTime"
+              inputId="ingredient4"
+            ></p-radioButton>
+            <i class="fa-solid fa-cube mx-2"></i>
+            <label for="ingredient4" class="ml-2">{{'service-time'|translate}}</label>
+          </div>
+          <div class="flex align-items-center">
+            <p-radioButton
+            (click)="onResourceTimeChange(2)"
+              styleClass="radio-style"
+              name="resourceTime"
+              value="2"
+              [(ngModel)]="resourceTime"
+              inputId="ingredient4"
+            ></p-radioButton>
+            <i class="fa-regular fa-clock mx-2"></i>
+            <label for="ingredient4" class="ml-2">{{'time-constant'|translate}}</label>
+          </div>
+        </div>
+        <div *ngIf="showFixedTime" class="border-solid align-self-end border-gray-100 border-round-md select">
+            <p-inputNumber
+            [(ngModel)]="fixedTimeValue"
+            [showButtons]="true"
+            [max]="100" [min]="0"
+            buttonLayout="horizontal"
+            inputId="horizontal"
+            spinnerMode="horizontal"
+            [step]="1"
+            decrementButtonClass="p-button-secondary"
+            incrementButtonClass="p-button-secondary"
+            incrementButtonIcon="pi pi-plus"
+            decrementButtonIcon="pi pi-minus"
+             ></p-inputNumber>
+        </div>
+      </div>
+    </div>
+    <!-- Multiple Booking -->
+    <div class="flex flex-column align-items-start gap-1 blue-gray-100 p-2 resource-time">
+      <label class="mb-3">{{'multiple-booking'|translate}}<i class="pi pi-info-circle my-2 me-2"></i></label>
+      <div class="flex flex-row gap-5 blue-gray-100 align-items-center justify-content-between w-full resource-time">
+        <div class="flex flex-row gap-4 resource-time">
+          <div class="flex align-items-center">
+            <p-radioButton
+            (click)="onBookingTypeChange(1)"
+              styleClass="radio-style"
+              name="bookingType"
+              value="1"
+              [(ngModel)]="bookingType"
+              inputId="ingredient4"
+            ></p-radioButton>
+            <i class="fa-regular fa-user mx-2"></i>
+            <label for="ingredient4" class="ml-2">{{'only-reservation'|translate}}</label>
+          </div>
+          <div class="flex align-items-center">
+            <p-radioButton
+            (click)="onBookingTypeChange(2)"
+              styleClass="radio-style"
+              name="bookingType"
+              value="2"
+              [(ngModel)]="bookingType"
+              inputId="ingredient4"
+            ></p-radioButton>
+            <i class="ml-2 pi pi-users mx-2"></i>
+            <label for="ingredient4" class="ml-2">{{'same-appointment'|translate}}</label>
+          </div>
+        </div>
+        <div *ngIf="showMultiBooking" class="border-solid w-5 align-self-end border-gray-100 border-round-md select">
+          <div class="available__time">
+            <p-inputNumber [(ngModel)]="availableTime"
+             [max]="100"
+             [min]="0"
+             [showButtons]="true"
+             ariaLabel="minmax"
+               inputStyleClass="available__time__input"
+               mode="decimal">
+            </p-inputNumber>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-card>
+   </div>
+</div>
+</div>
+</div>

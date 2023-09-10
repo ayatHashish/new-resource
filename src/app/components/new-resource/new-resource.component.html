@@ -1,0 +1,27 @@
+<div class="new-resource-sec d-flex ">
+  <div class=" p-1 align-items-center flex gap-3 w-max d-flex">
+
+    <div class="back">
+      <i class="pi text-blue-900 cursor-pointer font-bold pi-arrow-right"></i>
+    </div>
+    <div class="title">
+      <h4 class="text-blue-900 sm:font-semibold font-bold">{{ 'add' | translate }}
+      </h4>
+    </div>
+  </div>
+  <div class="p-1 align-items-center flex gap-3 w-max d-flex new-resource ">
+    <div class="d-flex align-items-end ">
+      <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+      <p class="m-2 bold"> {{'activated' | translate}}</p>
+    </div>
+
+    <div class="edit-resource">
+      {{'SaveChanges' | translate}}
+    </div>
+
+    <div class="delete-resource text-danger">
+      <i class="pi text-red-500 pi-trash"></i>
+      {{'delete' | translate}}
+    </div>
+  </div>
+</div>

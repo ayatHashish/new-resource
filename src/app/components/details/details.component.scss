@@ -1,0 +1,149 @@
+::ng-deep {
+  .p-card {
+    margin: 30px 0;
+    padding: 0 0.5rem;
+    border-radius: 12px;
+    box-shadow: none;
+    color: var(--text-main-color);
+  }
+  .p-radioButton {
+    margin: 0 10px !important ;
+    color: var(--text-main-color);
+  }
+  .p-button {
+    background-color: transparent;
+    border: none;
+    color: #8f9bba;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: transparent !important;
+      border: none !important;
+      color: black !important;
+    }
+  }
+  .available {
+    .p-card-content {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 20px !important;
+    }
+
+    .p-inputtext:enabled:focus {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .p-inputtext:enabled:hover {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .p-inputtext:enabled {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .p-inputtext {
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+  .available__time {
+    border-radius: 9px !important;
+    border: 1px solid #d9d9d9 !important;
+    background: #fff !important;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .p-dropdown:not(.p-disabled):hover {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .p-dropdown:not(.p-disabled):focus {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .p-dropdown:not(.p-disabled) {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .p-inputnumber-buttons-stacked {
+      flex-direction: row-reverse;
+    }
+    .available__time__input {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .p-inputnumber-input {
+        // margin-right: 10px !important;
+      }
+    }
+
+    .dropdown-units {
+      div {
+        background: #e7e7e8 !important;
+      }
+    }
+
+    .available__time__input {
+      text-align: right !important;
+    }
+  }
+
+  .appointment__container {
+    // margin: 30px 30px 10px 30px;
+
+    p {
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+  .p-inputnumber-buttons-horizontal {
+    input {
+      text-align: center;
+    }
+  }
+  .custom-radio .p-radiobutton-box {
+    background-color: blue;
+    border: 2px solid white;
+  }
+  .p-radiobutton .p-radiobutton-box {
+    border: 1px solid #ced4da;
+    background: #ffffff;
+    width: 20px;
+    height: 20px;
+  }
+  .custom-radio .p-radiobutton-label {
+    color: white;
+  }
+
+  .p-inputnumber-buttons-horizontal .p-button.p-inputnumber-button-down,
+  .p-inputnumber-buttons-horizontal .p-button.p-inputnumber-button-up
+   {
+   border-radius: 0;
+  margin: 12px;
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+}
+
+
+@media screen and (max-width: 580px) {
+  .resource-av,.resource-time,.multiple-booking {
+    flex-direction: column !important;
+  
+  }
+
+  .select{
+    display: block;
+  }
+  
+}
